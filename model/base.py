@@ -1,0 +1,11 @@
+from abc import ABC, abstractmethod
+
+
+class ChatModel(ABC):
+
+    def __init__(self) -> None:
+        super().__init__()
+
+    @abstractmethod
+    def chat(self, prompt: str = None) -> str:
+        pass

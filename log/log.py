@@ -1,0 +1,8 @@
+import logging
+from config import config_manager
+
+log_file_path = config_manager.config["Log"]["file_path"]
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+logging.basicConfig(filename=log_file_path, level=logging.INFO, format=LOG_FORMAT, encoding='utf-8', errors='ignore')
+
+logger = logging.getLogger(name="PentestAssistant")

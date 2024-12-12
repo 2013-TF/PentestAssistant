@@ -1,0 +1,12 @@
+from abc import ABC, abstractmethod
+from model import ChatModel
+
+
+class Agent(ABC):
+
+    def __init__(self, chat_model: ChatModel) -> None:
+        self.chat_model = chat_model
+
+    @abstractmethod
+    def process(self, query: str) -> str:
+        pass
